@@ -1,8 +1,14 @@
 import React, { Component } from "react";
+import Navbar from "../UI/NavBar/NavBar";
 
 class Home extends Component {
   render() {
-    return <div>Hello World!</div>;
+    return (
+      <div>
+        <Navbar />
+        <div>Hello World!</div>
+      </div>
+    );
   }
 }
 
