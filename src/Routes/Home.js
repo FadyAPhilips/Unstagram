@@ -13,10 +13,10 @@ const Container = styled.div`
 const PostsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 50%;
   background-color: #4fd1c5;
   margin: 10px;
-  /* padding: 10px; */
+  padding: 10px;
   border: 3px solid #38b2ac;
   border-radius: 15px;
 `;
@@ -29,6 +29,7 @@ class Home extends Component {
       return (
         <Post
           name={post.name}
+          profilePic={post.profilePic}
           picture={post.picture}
           picID={"picture" + this.postPicCount}
         />
