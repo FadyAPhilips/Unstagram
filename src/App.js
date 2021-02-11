@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Home from "./Routes/Home";
 
 const Container = styled.div`
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   height: 100%;
   top: 0;
@@ -12,7 +12,7 @@ const Container = styled.div`
   background-color: #81e6d9;
 `;
 
-function App() {
+const App = () => {
   return (
     <Container>
       <Router>
@@ -22,6 +22,6 @@ function App() {
       </Router>
     </Container>
   );
-}
+};
 
 export default App;
