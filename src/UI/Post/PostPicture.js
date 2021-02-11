@@ -6,6 +6,7 @@ const Picture = styled.img`
   display: flex;
   border-radius: 10px;
   max-width: 100%;
+  max-height: 600px;
 `;
 
 const ContainerDiv = styled.div`

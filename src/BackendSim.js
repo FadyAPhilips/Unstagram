@@ -9,18 +9,22 @@ class BackendSim {
       {
         name: "Fady",
         picture: pic1,
+        profilePic: pic1,
       },
       {
         name: "Amr",
         picture: pic2,
+        profilePic: pic2,
       },
       {
         name: "Joe",
         picture: pic3,
+        profilePic: pic1,
       },
       {
         name: "Mark",
         picture: pic4,
+        profilePic: pic4,
       },
     ];
 
