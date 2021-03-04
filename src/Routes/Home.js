@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import BackendSim from "../BackendSim";
+import BackendSim from "../BackendSim/BackendSim";
 import Navbar from "../UI/NavBar/NavBar";
 import Post from "../UI/Post/post";
 
@@ -31,6 +31,7 @@ class Home extends Component {
           name={post.name}
           profilePic={post.profilePic}
           picture={post.picture}
+          caption={post.caption}
           picID={"picture" + this.postPicCount}
         />
       );

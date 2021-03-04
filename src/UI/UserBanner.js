@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import ProfileIcon from "../profileIcon";
+import ProfileIcon from "./profileIcon";
 
 const HeaderContainer = styled.div`
   display: flex;
   margin-bottom: 10px;
-  height: 50px;
+  height: ${(props) => (!props.comment ? "50px" : "30px")};
 `;
 
 const NameContainer = styled.div`
@@ -15,10 +15,10 @@ const NameContainer = styled.div`
   margin-left: 5px;
 `;
 
-const PostHeader = (props) => {
+const UserBanner = (props) => {
   return (
     <div>
-      <HeaderContainer>
+      <HeaderContainer comment={props.comment}>
         <ProfileIcon profilePic={props.profilePic} />
         <NameContainer>{props.name}</NameContainer>
       </HeaderContainer>
@@ -26,4 +26,4 @@ const PostHeader = (props) => {
   );
 };
 
-export default PostHeader;
+export default UserBanner;

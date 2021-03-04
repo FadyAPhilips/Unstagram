@@ -7,6 +7,7 @@ const Picture = styled.img`
   border-radius: 10px;
   max-width: 100%;
   max-height: 600px;
+  border: 2px solid #38b2ac;
 `;
 
 const ContainerDiv = styled.div`
