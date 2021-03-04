@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import UserBanner from "../UserBanner";
 import PostPicture from "./PostPicture";
-import PostHeader from "./PostHeader";
+import Comments from "./comment";
 
 const PostContainer = styled.div`
   background-color: #81e6d9;
@@ -17,15 +18,40 @@ const PostContainer = styled.div`
   }
 `;
 
+const Caption = styled.div`
+  padding: 10px;
+`;
+
+const subcomments = [
+  {
+    name: "Naruto",
+    pic: "pic1",
+    comment: "Believe it!!",
+  },
+];
+
 class Post extends Component {
+  getChildComments = (comments) => {
+    console.log("function");
+    const coms = comments.map((e, i) => {
+      console.log(e);
+      return <Comments comment={e.comment} key={i} />;
+    });
+    return coms;
+  };
+
   render() {
     return (
       <PostContainer>
-        <PostHeader name={this.props.name} profilePic={this.props.profilePic} />
+        <UserBanner name={this.props.name} profilePic={this.props.profilePic} />
         <PostPicture picture={this.props.picture} picID={this.props.picID} />
-        <div>Likes And stuff</div>
-        <div>Caption Here</div>
-        <div>Comments</div>
+        <Caption>{this.props.caption}</Caption>
+        <div style={{ color: "blue" }}>Likes And stuff</div>
+        <Comments
+          comment={
+            "CSS Filters are a powerful tool that authors can use to achieve varying visual effects (sort of like Photoshop filters for the browser). The CSS filter property provides access to effects like blur or color shifting on an element’s rendering before the element is displayed. Filters are commonly used to adjust the rendering of an image, a background, or a border."
+          }
+        />
       </PostContainer>
     );
   }
